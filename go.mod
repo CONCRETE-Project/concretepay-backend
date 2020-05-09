@@ -1,4 +1,4 @@
-module github.com/eabz/concretepay-backend
+module github.com/CONCRETE-Project/concretepay-backend
 
 go 1.13
 

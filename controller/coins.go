@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"github.com/eabz/concretepay-backend/models"
-	coinfactory "github.com/eabz/concretepay-backend/models/coin-factory"
+	"github.com/CONCRETE-Project/concretepay-backend/models"
+	coinfactory "github.com/CONCRETE-Project/concretepay-backend/models/coin-factory"
 )
 
 type CoinController struct{}

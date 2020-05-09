@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/eabz/concretepay-backend/models/coin-factory/coins"
+	"github.com/CONCRETE-Project/concretepay-backend/models/coin-factory/coins"
 )
 
 // Coins refers to the coins that are being used on the API instance

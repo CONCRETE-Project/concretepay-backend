@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/eabz/concretepay-backend/controller"
-	"github.com/eabz/concretepay-backend/models"
+	"github.com/CONCRETE-Project/concretepay-backend/controller"
+	"github.com/CONCRETE-Project/concretepay-backend/models"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	_ "github.com/heroku/x/hmetrics/onload"
