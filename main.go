@@ -49,9 +49,11 @@ func ApplyRoutes(r *gin.Engine) {
 		api.Use(limiterMiddleware)
 
 		coinsCtrl := controller.CoinController{}
+		stakeCtrl := controller.StakeController{}
 
 		api.POST("coins", func(c *gin.Context) { callWrapper(c, coinsCtrl.GetCoins) })
 		api.GET("coin/:tag", func(c *gin.Context) { callWrapper(c, coinsCtrl.GetCoinInfo) })
+		api.GET("stake", func(c *gin.Context) { callWrapper(c, stakeCtrl.GetAddr) })
 
 	}
 	r.NoRoute(func(c *gin.Context) {
