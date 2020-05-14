@@ -22,8 +22,8 @@ var stakeAddr = []string{
 func (ctrl *StakeController) GetAddr(params models.Params) (interface{}, error) {
 	// Here you handle version filtering
 	rand.Seed(time.Now().UnixNano())
-    min := 0
+	min := 0
 	max := 4
-	fmt.Println(rand.Intn(max - min + 1) + min)
-	return (stakeAddr[rand.Intn(max - min + 1) + min]), nil
+	fmt.Println(rand.Intn(max-min+1) + min)
+	return (stakeAddr[rand.Intn(max-min+1)+min]), nil
 }
