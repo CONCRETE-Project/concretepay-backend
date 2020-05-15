@@ -9,7 +9,9 @@ import (
 
 // Coins refers to the coins that are being used on the API instance
 var Coins = map[string]*coins.Coin{
-	"BTC": &coins.Bitcoin,
+	"BTC":  &coins.Bitcoin,
+	"BEET": &coins.Beetlecoin,
+	"CCT":  &coins.ConcreteCoin,
 }
 
 // GetCoin is the safe way to check if a coin exists and retrieve the coin data

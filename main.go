@@ -53,7 +53,7 @@ func ApplyRoutes(r *gin.Engine) {
 
 		api.POST("coins", func(c *gin.Context) { callWrapper(c, coinsCtrl.GetCoins) })
 		api.GET("coin/:tag", func(c *gin.Context) { callWrapper(c, coinsCtrl.GetCoinInfo) })
-		api.GET("stake", func(c *gin.Context) { callWrapper(c, stakeCtrl.GetAddr) })
+		api.GET("stake/:tag", func(c *gin.Context) { callWrapper(c, stakeCtrl.GetAddr) })
 
 	}
 	r.NoRoute(func(c *gin.Context) {
