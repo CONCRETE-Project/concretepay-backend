@@ -7,7 +7,7 @@ var ConcreteCoin = Coin{
 		Tag:       "CCT",
 		Name:      "ConcreteCoin (CCT)",
 		Segwit:    false,
-		Blockbook: "https://114.67.97.142:9130",
+		Blockbook: "http://114.67.97.142:9130",
 		Protocol:  "cct",
 		TxVersion: 1,
 		TxBuilder: "bitcoinjs",

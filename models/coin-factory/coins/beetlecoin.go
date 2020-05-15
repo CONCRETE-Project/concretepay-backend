@@ -7,7 +7,7 @@ var Beetlecoin = Coin{
 		Tag:       "BEET",
 		Name:      "BeetleCoin (BEET)",
 		Segwit:    false,
-		Blockbook: "https://111.229.169.195:9130",
+		Blockbook: "http://111.229.169.195:9130",
 		Protocol:  "beet",
 		TxVersion: 1,
 		TxBuilder: "bitcoinjs",
