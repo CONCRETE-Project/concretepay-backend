@@ -17,8 +17,8 @@ var ConcreteCoin = Coin{
 				MessagePrefix: "\x18ConcreteCoin Signed Message:\n",
 				Bech32:        "",
 				Bip32: CoinNetWorkBip32Info{
-					Public:  0x04b24746,
-					Private: 0x04b2430c,
+					Public:  0x0488B21e,
+					Private: 0x0488ade4,
 				},
 				PubKeyHash: 28,
 				ScriptHash: 15,
