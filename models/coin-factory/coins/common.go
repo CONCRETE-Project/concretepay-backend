@@ -16,17 +16,16 @@ type CoinNetworkInfo struct {
 }
 
 type CoinInfo struct {
-	Icon         string                     `json:"icon"`
-	Tag          string                     `json:"tag"`
-	Name         string                     `json:"name"`
-	Segwit       bool                       `json:"segwit"`
-	Blockbook    string                     `json:"blockbook"`
-	BlockbookApi string                     `json:"blockbook_api"`
-	Protocol     string                     `json:"protocol"`
-	TxVersion    int                        `json:"tx_version"`
-	TxBuilder    string                     `json:"tx_builder"`
-	HDIndex      int                        `json:"hd_index"`
-	Networks     map[string]CoinNetworkInfo `json:"networks"`
+	Icon      string                     `json:"icon"`
+	Tag       string                     `json:"tag"`
+	Name      string                     `json:"name"`
+	Segwit    bool                       `json:"segwit"`
+	Blockbook string                     `json:"blockbook"`
+	Protocol  string                     `json:"protocol"`
+	TxVersion int                        `json:"tx_version"`
+	TxBuilder string                     `json:"tx_builder"`
+	HDIndex   int                        `json:"hd_index"`
+	Networks  map[string]CoinNetworkInfo `json:"networks"`
 }
 
 // Coin is the basic coin structure to get the correct properties for each coin.

@@ -14,7 +14,7 @@ func (ctrl *CoinController) GetCoins(params models.Params) (interface{}, error) 
 	var response models.CoinsResponse
 	ver, err := strconv.Atoi(params.Version)
 
-	if err != nil{
+	if err != nil {
 		return nil, err
 	}
 
