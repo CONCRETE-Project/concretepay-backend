@@ -3,7 +3,6 @@ package main
 import (
 	"net/http"
 	"os"
-	"strconv"
 	"time"
 
 	"github.com/CONCRETE-Project/concretepay-backend/controller"
@@ -60,14 +59,10 @@ func ApplyRoutes(r *gin.Engine) {
 	})
 }
 
-func callWrapper(c *gin.Context, method func(models.Params) (interface{}, error)) {
-	ver, err := strconv.Atoi(c.Param("version"))
-	if err != nil {
-		return
-	}
+func callWrapper(c *gin.Context, method func(models.Params) (data interface{}, err error)) {
 	params := models.Params{
 		Tag:     c.Param("tag"),
-		Version: ver,
+		Version: c.Param("version"),
 	}
 	res, err := method(params)
 	if err != nil {
