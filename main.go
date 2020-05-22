@@ -1,10 +1,9 @@
 package main
 
 import (
-	"encoding/json"
-	"io/ioutil"
 	"net/http"
 	"os"
+	"strconv"
 	"time"
 
 	"github.com/CONCRETE-Project/concretepay-backend/controller"
@@ -51,7 +50,7 @@ func ApplyRoutes(r *gin.Engine) {
 		coinsCtrl := controller.CoinController{}
 		stakeCtrl := controller.StakeController{}
 
-		api.POST("coins", func(c *gin.Context) { callWrapper(c, coinsCtrl.GetCoins) })
+		api.GET("coins/:version", func(c *gin.Context) { callWrapper(c, coinsCtrl.GetCoins) })
 		api.GET("coin/:tag", func(c *gin.Context) { callWrapper(c, coinsCtrl.GetCoinInfo) })
 		api.GET("stake/:tag", func(c *gin.Context) { callWrapper(c, stakeCtrl.GetAddr) })
 
@@ -62,24 +61,13 @@ func ApplyRoutes(r *gin.Engine) {
 }
 
 func callWrapper(c *gin.Context, method func(models.Params) (interface{}, error)) {
-	var version int
-	if c.Request.Method == "POST" {
-		var postReq models.CoinsRequestBody
-		bodyRaw, err := ioutil.ReadAll(c.Request.Body)
-		if err != nil {
-			c.JSON(500, gin.H{"error": err.Error(), "status": -1})
-			return
-		}
-		err = json.Unmarshal(bodyRaw, &postReq)
-		if err != nil {
-			c.JSON(500, gin.H{"error": err.Error(), "status": -1})
-			return
-		}
-		version = postReq.Version
+	ver, err := strconv.Atoi(c.Param("version"))
+	if err != nil {
+		return
 	}
 	params := models.Params{
 		Tag:     c.Param("tag"),
-		Version: version,
+		Version: ver,
 	}
 	res, err := method(params)
 	if err != nil {
