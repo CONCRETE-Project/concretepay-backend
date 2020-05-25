@@ -8,7 +8,7 @@ var ConcreteCoin = Coin{
 		Name:      "ConcreteCoin (CCE)",
 		Segwit:    false,
 		Blockbook: "https://blockbook.concretecoin.org/",
-		Protocol:  "cct",
+		Protocol:  "cce",
 		TxVersion: 1,
 		TxBuilder: "bitcoinjs",
 		HDIndex:   0,
