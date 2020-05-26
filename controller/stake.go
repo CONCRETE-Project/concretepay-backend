@@ -11,7 +11,7 @@ import (
 type StakeController struct{}
 
 var stakeAddr = map[string][]string{
-	"CCT": {
+	"CCE": {
 		"SZ2xSuY4U4uPXzohHMpgpoVKCJDYsmgacU",
 		"SfZcVnLkjnPwga9JjgwDv57AaMvMvwh63f",
 		"SVxyTfNdcKDVAe9aLsp2UTakvfizH2oKkm",
