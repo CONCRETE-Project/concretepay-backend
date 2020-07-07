@@ -7,7 +7,7 @@ var ConcreteCoin = Coin{
 		Tag:       "CCE",
 		Name:      "ConcreteCoin (CCE)",
 		Segwit:    false,
-		Blockbook: "https://blockbook.concrete.yuetubi.cn/",
+		Blockbook: "https://blockbook.concretecoin.org/",
 		Protocol:  "cce",
 		TxVersion: 1,
 		TxBuilder: "bitcoinjs",
